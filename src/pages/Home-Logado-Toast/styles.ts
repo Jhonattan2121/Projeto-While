@@ -67,4 +67,14 @@ export const MessageUser = styled.div`
 `;
 
 
+export const InputContainer = styled.div`
 
+`
+
+export const InputText = styled.text`
+
+`
+
+export const SendButton = styled.div`
+
+`

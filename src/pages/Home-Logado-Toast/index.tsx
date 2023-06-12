@@ -1,45 +1,40 @@
-import { MessageContent, MessageItem, MessageList,  MessageUser , LogoImage } from "./styles";
-import imgFoto from '../../assets/Ellipse 4.svg'
+import React, { useState } from 'react';
+import { MessageContent, MessageItem, MessageList, MessageUser, LogoImage } from './styles';
+
 import logoImg from '../../assets/Logo DoWhile - 2021.svg';
-import { PerfilComponent } from "../../components/PerfilComponent";
+import { PerfilComponent } from '../../components/PerfilComponent';
+import mockedMessages from '../../mock'; 
 
+export default function Toast() {
+  const [messages, setMessages] = useState(mockedMessages);
 
-const messages = [
-  {
-    id: 1,
-    text: 'Não vejo a hora de começar esse evento, com certeza vai ser o melhor de todos os tempos, vamooo pra cima! 🔥🔥',
-    user: {
-      avatar_url: `${imgFoto}`,
-      name: 'Dianne Russell'
+  const addMessage = (newMessage: string) => {
+    const newMessageObject = {
+      id: messages.length + 1,
+      text: newMessage,
+      user: {
+        avatar_url: messages[0].user.avatar_url,
+        name: messages[0].user.name,
+      },
+    };
+
+    const updatedMessages = [...messages, newMessageObject];
+
+    if (updatedMessages.length > 3) {
+      updatedMessages.shift();
     }
-  },
-  {
-    id: 2,
-    text: 'Esse vai ser simplesmente fantástico! Bora aprender tudo em relação a montagem de APIs GraphQL. Sem contar com as palestras e painéis.',
-    user: {
-      avatar_url: `${imgFoto}`,
-      name: 'Guy Hawkins'
-    }
-  },
-  {
-    id: 3,
-    text: 'Sem dúvida as palestras vão ser úteis para a minha carreira e para a de muitos 😍 #gorocket',
-    user: {
-      avatar_url: `${imgFoto}`,
-      name: 'Eleanor Pena'
-    }
-  }
-];
-export default function  toast() {
+
+    setMessages(updatedMessages);
+  };
+
   return (
     <>
-       <LogoImage src={logoImg} alt="" />
-    
+      <LogoImage src={logoImg} alt="" />
+
       <MessageList>
         {messages.map((message) => (
           <MessageItem key={message.id}>
             <MessageContent>
-
               <div>{message.text}</div>
               <MessageUser>
                 <div className="userImage">
@@ -52,7 +47,8 @@ export default function  toast() {
         ))}
       </MessageList>
 
-          <PerfilComponent />
+      <PerfilComponent onSendMessage={addMessage} />
+
     </>
-  )
+  );
 }

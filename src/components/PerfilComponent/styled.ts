@@ -127,19 +127,28 @@ export const Container = styled.div`
 export const TextInput = styled.input`
   position: absolute;
   width: 405px;
-    height: 195px;
-    left: 25px;
-    top: 363px;
+  height: 195px;
+  left: 25px;
+  top: 363px;
   background: #202024;
   font-family: 'Roboto', sans-serif;
   border: none;
   color: #8D8D99;
-  padding-bottom: 180px;
-
+  padding-bottom: 140px;
+  text-indent: 24px; /* Recuo esquerdo correspondente ao recuo do placeholder */
+  
   ::placeholder {
     color: #8D8D99;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    padding-left: 24px;
   }
 `;
+
+
 
 export const MessageLabel = styled.strong`
    position: absolute;
@@ -154,6 +163,7 @@ export const MessageLabel = styled.strong`
   line-height: 28px;
   top: 324px;
   left: 25px;
+  
 
   strong {
     font-family: 'Roboto';
@@ -180,6 +190,7 @@ export const Button = styled.button`
   left: 215px;
   top: 498px;
   background: #FF008E;
+  transition: transform 0.3s ease;
   
   p {
     position: absolute;
@@ -189,8 +200,9 @@ export const Button = styled.button`
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
-    /* identical to box height, or 143% */
-
     text-transform: uppercase;
+  }
+  &:hover {
+    transform: scale(1.05); 
   }
 `;
