@@ -62,11 +62,6 @@ export const ModalInterface = styled.div`
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
-  /* identical to box height, or 125% */
-
-
-  /* gray3 */
-
   color: #E1E1E6;
 }
 
@@ -80,11 +75,6 @@ export const ModalInterface = styled.div`
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  /* identical to box height, or 100% */
-
-
-  /* gray2 */
-
   color: #C4C4CC;
 }
 
@@ -135,7 +125,7 @@ export const TextInput = styled.input`
   border: none;
   color: #8D8D99;
   padding-bottom: 140px;
-  text-indent: 24px; /* Recuo esquerdo correspondente ao recuo do placeholder */
+  text-indent: 24px; 
   
   ::placeholder {
     color: #8D8D99;

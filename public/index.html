@@ -16,24 +16,8 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
     <title>Projeto Web</title>
-    <script>
-      function updateContentPosition() {
-        const rootElement = document.getElementById('root');
-        const bodyWidth = document.body.clientWidth;
-        const bodyHeight = document.body.clientHeight;
-        const rootWidth = rootElement.offsetWidth;
-        const rootHeight = rootElement.offsetHeight;
-  
-        const leftPosition = (bodyWidth - rootWidth) / 2;
-        const topPosition = (bodyHeight - rootHeight) / 2;
-  
-        rootElement.style.left = `${leftPosition}px`;
-        rootElement.style.top = `${topPosition}px`;
-      }
-  
-      window.addEventListener('resize', updateContentPosition);
-      window.addEventListener('load', updateContentPosition);
-    </script>
+    
+
   </head>
   <body>
    
