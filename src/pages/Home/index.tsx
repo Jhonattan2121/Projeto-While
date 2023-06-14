@@ -1,25 +1,22 @@
-
-import {   LoginBox , GirBanner , Container  } from "./styles";
-
+import React from 'react';
+import { LoginBox, GirBanner, Container } from './styles';
 import ButtonComponents from '../../components/ButtonComponents';
 import Girlbane from '../../assets/banner-girl.png';
-import MessageListComponents from "../../components/MessageList";
+import MessageListComponents from '../../components/MessageList';
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <Container>
       <LoginBox>
-          <GirBanner className="girl">
-            <img src={Girlbane} alt="" />
-            <strong>Envie e compartilhe sua mensagem</strong>
+        <GirBanner>
+          <img src={Girlbane} alt="" />
+          <strong>Envie e compartilhe sua mensagem</strong>
           <ButtonComponents />
-          </GirBanner>
-        
-     
+        </GirBanner>
       </LoginBox>
-      
-      <MessageListComponents  />
-      
+      <MessageListComponents />
     </Container>
-  )
-}
+  );
+};
+
+export default Home;

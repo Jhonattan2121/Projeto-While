@@ -16,16 +16,16 @@ type PerfilComponentProps = {
 };
 
 const PerfilComponent: React.FC<PerfilComponentProps> = ({ onSendMessage }) => {
-  const [newMessage, setNewMessage] = useState('');
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [newMessage, setNewMessage] = useState<string>('');
+  const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
 
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const handleClick = (): void => {
     navigate('/');
   };
 
-  const handleSendMessage = () => {
+  const handleSendMessage = (): void => {
     if (newMessage.trim() === '') {
       return;
     }
@@ -53,45 +53,43 @@ const PerfilComponent: React.FC<PerfilComponentProps> = ({ onSendMessage }) => {
 
       <ModalInterface>
         <Container>
-        <div className="modal">
-          <button  onClick={handleClick}>
-            <img src={back} alt="Back" className="ImgBack" />
-          </button>
-          <div className="userImage">
-            <img src={Cara} alt="User" style={{ width: '125px', height: '125px' }} />
+          <div className="modal">
+            <button onClick={handleClick}>
+              <img src={back} alt="Back" className="ImgBack" />
+            </button>
+            <div className="userImage">
+              <img src={Cara} alt="User" style={{ width: '125px', height: '125px' }} />
+            </div>
+            <strong className="Name">Tiago Luchtenberg</strong>
+
+            <p className="Name-p">
+              <VscGithubInverted size={18} style={{ marginRight: '10px' }} />
+              tiago_luch
+            </p>
+
+            <strong className="MessageLabel">Mensagem</strong>
+
+            <input
+              type="text"
+              placeholder="Qual sua expectativa para o evento?"
+              value={newMessage}
+              onChange={(event) => setNewMessage(event.target.value)}
+            />
+
+            <button onClick={handleSendMessage}>
+              <p className="Send-p">Enviar Mensagem</p>
+            </button>
           </div>
-          <strong className="Name">Tiago Luchtenberg</strong>
+        </Container>
+      </ModalInterface>
 
-          <p className="Name-p">
-            <VscGithubInverted size={18} style={{ marginRight: '10px' }} />
-            tiago_luch
-          </p>
-
-          
-            <strong className='MessageLabel'>Mensagem</strong>
-          
-          <input
-            type="text"
-            placeholder="Qual sua expectativa para o evento?"
-            value={newMessage}
-            onChange={(event) => setNewMessage(event.target.value)}
-          />
-
-          <button onClick={handleSendMessage}>
-            <p className='Send-p'>Enviar Mensagem</p>
-          </button>
-        </div>
-          </Container>
-        </ModalInterface>
-
-        {showSuccessModal && (
-          <SuccessModal>
-            <p>Mensagem enviada com sucesso!</p>
-          </SuccessModal>
-        )}
+      {showSuccessModal && (
+        <SuccessModal>
+          <p>Mensagem enviada com sucesso!</p>
+        </SuccessModal>
+      )}
     </>
   );
 };
 
 export default PerfilComponent;
-

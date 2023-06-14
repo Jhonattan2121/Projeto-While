@@ -38,14 +38,15 @@ export const LoginBox = styled.div`
 `;
 
 export const GirBanner = styled.div`
-  
-  position: absolute;
-  width: 463px;
-  height: 935px;
-  left: 1200px;
-  top: 0px;
-
- 
+  position: fixed;
+  height: 100vh;
+    width: 446px;
+    border-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: -166px;
+    top: 0px;
 `;
 
 export const Strong = styled.strong`

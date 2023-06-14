@@ -4,13 +4,15 @@ import Cara from '../../assets/carinha.svg';
 import logoImg from '../../assets/Logo DoWhile - 2021.svg';
 import PerfilComponent from '../../components/PerfilComponent';
 
+interface User {
+  avatar_url: string;
+  name: string;
+}
+
 interface Message {
   id: string;
   text: string;
-  user: {
-    avatar_url: string;
-    name: string;
-  };
+  user: User;
 }
 
 export default function Toast() {
