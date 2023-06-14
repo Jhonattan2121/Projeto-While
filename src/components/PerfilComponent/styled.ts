@@ -7,7 +7,6 @@ export const ModalInterface = styled.div`
   height: 100vh;
 `;
 
-
 export const Container = styled.div`
   .modal {
     display: flex;
@@ -55,7 +54,13 @@ export const Container = styled.div`
     align-items: center;
     padding: 10px 32px;
     gap: 10px;
-
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
     position: absolute;
     width: 195px;
     height: 40px;
@@ -115,6 +120,7 @@ input {
   color: #8D8D99;
   font-size: 22px; 
   padding-bottom: 160px;
+  padding-left: 10px;
   ::placeholder {
     color: #8D8D99;
     font-family: Roboto;

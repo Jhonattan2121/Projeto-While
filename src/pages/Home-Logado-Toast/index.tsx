@@ -22,7 +22,7 @@ export default function Toast() {
       text: message,
       user: {
         avatar_url: `${Cara}`,
-        name: 'Nome do Usuário',
+        name: 'Tiago Luchtenberg',
       },
     };
 

@@ -9,7 +9,7 @@ type User = {
 };
 
 type Message = {
-  id: number; // Corrigido para ser um número
+  id: number; 
   text: string;
   user: User;
 };

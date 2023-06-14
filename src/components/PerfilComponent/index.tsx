@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { VscGithubInverted } from 'react-icons/vsc';
 import background from '../../assets/background.png';
 import back from '../../assets/back.png';
-import imgFoto from '../../assets/Ellipse 4.svg';
+import Cara from '../../assets/carinha.svg';
 import {
   ModalInterface,
   Sidebar,
@@ -58,7 +58,7 @@ const PerfilComponent: React.FC<PerfilComponentProps> = ({ onSendMessage }) => {
             <img src={back} alt="Back" className="ImgBack" />
           </button>
           <div className="userImage">
-            <img src={imgFoto} alt="User" style={{ width: '125px', height: '125px' }} />
+            <img src={Cara} alt="User" style={{ width: '125px', height: '125px' }} />
           </div>
           <strong className="Name">Tiago Luchtenberg</strong>
 
