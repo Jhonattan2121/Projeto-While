@@ -29,9 +29,7 @@ export const LoginBox = styled.div`
   
   transform: translateX(-50%);
 
-  @media screen and (max-width: 768px) {
-    padding: 200px 40px 0;
-  }
+
 
   strong {
     font-size: 32px;
@@ -47,21 +45,12 @@ export const GirBanner = styled.div`
   left: 1200px;
   top: 0px;
 
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    height: auto;
-    left: 0;
-    top: 0;
-    background-size: cover;
-  }
+ 
 `;
 
 export const Strong = styled.strong`
   font-size: 32px;
   line-height: 36px;
 
-  @media screen and (max-width: 768px) {
-    font-size: 24px;
-    line-height: 28px;
-  }
+  
 `;

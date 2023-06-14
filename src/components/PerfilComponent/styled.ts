@@ -208,11 +208,11 @@ export const Sidebar = styled.div`
 
 export const SuccessModal = styled.div`
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 5%;
+  left: 85%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  background-color: #1B1B1F;
+  background: #1B873F;
   color: #fff;
 `;
 

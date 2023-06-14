@@ -18,7 +18,7 @@ export default function Home() {
      
       </LoginBox>
       
-      <MessageListComponents />
+      <MessageListComponents  />
       
     </Container>
   )

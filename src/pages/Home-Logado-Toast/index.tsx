@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MessageContent, MessageItem, MessageList, MessageUser, LogoImage, Container } from './styles';
-import Cara from '../../assets/carinha.svg'
+import Cara from '../../assets/carinha.svg';
 import logoImg from '../../assets/Logo DoWhile - 2021.svg';
 import PerfilComponent from '../../components/PerfilComponent';
 
@@ -16,18 +16,17 @@ interface Message {
 export default function Toast() {
   const [messages, setMessages] = useState<Message[]>([]);
 
-  const addMessage = () => {
+  const addMessage = (message: string) => {
     const newMessageObject: Message = {
       id: Math.random().toString(36).substring(2, 7),
-      text: 'Lorem Ipsum',
+      text: message,
       user: {
         avatar_url: `${Cara}`,
         name: 'Nome do Usuário',
       },
     };
 
-    const updatedMessages = [...messages, newMessageObject].slice(-3); 
-
+    const updatedMessages = [...messages, newMessageObject].slice(-3);
     setMessages(updatedMessages);
   };
 
