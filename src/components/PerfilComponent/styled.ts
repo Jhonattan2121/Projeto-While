@@ -1,19 +1,37 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ModalInterface = styled.div`
-  position: absolute;
-  width: 453px;
-  height: 578px;
-  left: 1180px;
-  top: 121px;
-
-  background: #1B1B1F;
-
-  margin-top: 16px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
+`;
 
-  .userImage {
+
+export const Container = styled.div`
+  .modal {
+    display: flex;
+    position: fixed;
+    width: 453px;
+    height: 578px;
+    right: 67px;
+    top: 121px;
+  background: #1B1B1F;
+}
+
+.ImgBack {
+  position: absolute;
+  left: 6.1%;
+  right: 38.68%;
+  top: 4.68%;
+  bottom: 78.41%;
+  width: 45px;
+  height: 45px;
+  
+  border: 4px solid transparent;
+}
+
+.userImage {
     position: absolute;
     padding: 2px;
     background: linear-gradient(100deg, #ff008e 0.48%, #ffcd1e 100%);
@@ -30,46 +48,38 @@ export const ModalInterface = styled.div`
     }
   }
 
-  .ImgBackButton {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
+  .Send-p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 32px;
+    gap: 10px;
 
-.ImgBack {
-  position: absolute;
-  left: 6.1%;
-  right: 38.68%;
-  top: 4.68%;
-  bottom: 78.41%;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 4px solid transparent;
-}
+    position: absolute;
+    width: 195px;
+    height: 40px;
+    right: 38px;
+    top: 505px;
+    background: #FF008E;
+  }
 
 .Name {
   position: absolute;
-  width: 204px;
-  height: 30px;
-  left: 120px;
-  top: 216px;
-
+  right: 119px;
+  top: 212px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
-  color: #E1E1E6;
 }
 
 .Name-p {
   position: absolute;
   width: 95px;
   left: 187px;
-  top: 253px;
+  top: 250px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -78,121 +88,133 @@ export const ModalInterface = styled.div`
   color: #C4C4CC;
 }
 
-.Github-Name {
-  position: absolute;
-left: 0%;
-right: 0%;
-top: 1.04%;
-bottom: 1.04%;
-
-
-}
-`
-
-
-export const BackgroundRight = styled.div`
- 
-  right: 0;
-  top: 0;
-  overflow: hidden;
-
-  .background {
-    position: absolute;
-    width: 473px;
-    height: 936px;
-    left: 1401px;
-    top: 0;
-    border-radius: 0;
-  }
-
-  
-`;
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
-
-export const TextInput = styled.input`
+.MessageLabel {
   position: absolute;
   width: 405px;
-  height: 195px;
-  left: 25px;
-  top: 363px;
-  background: #202024;
-  font-family: 'Roboto', sans-serif;
-  border: none;
-  color: #8D8D99;
-  padding-bottom: 140px;
-  text-indent: 24px; 
-  
-  ::placeholder {
-    color: #8D8D99;
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    padding-left: 24px;
-  }
-`;
-
-
-
-export const MessageLabel = styled.strong`
-   position: absolute;
-  left: 60.76%;
-  right: 32.22%;
-  top: 103.85%;
-  bottom: 45.73%;
-  font-family: 'Roboto', sans-serif;
+  height: 64px;
+   background: #29292E;;
+  right: 25px;
+  top: 278px;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 28px;
-  top: 324px;
-  left: 25px;
-  
+  line-height: 60px;
+  padding-left: 20px;
+  color: #E1E1E6;
 
-  strong {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 28px;
-    padding: 13px 153px;
-    
-    background: #29292E;
 }
+
+input {
+  position: absolute;
+  width: 405px;
+  height: 220px;
+  right: 25px;
+  top: 338px;
+  background: #202024;
+  color: #8D8D99;
+  font-size: 22px; 
+  padding-bottom: 160px;
+  ::placeholder {
+    color: #8D8D99;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    padding-left: 10px;
+    position: absolute;
+    width: 256px;
+    height: 24px;
+    top: 20px;
+  }
+}
+
+.SendMessageButton {
+  align-self: flex-end;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 10px;
+  }
+
+  .userImage {
+    margin-top: 10px;
+  }
+
+  .userImage img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .Name {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .Name-p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  .MessageLabel {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  input {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .SendMessageButton {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+`
+
+export const Sidebar = styled.div`
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  
+  overflow: hidden;
+  
+
+  .background {
+    position: fixed;
+    height: 100vh;
+    width: 620px;
+    border-radius: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: -123px;
+    top: 0;
+  }
 `;
 
-export const Button = styled.button`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 64px;
-  gap: 10px;
-  position: absolute;
-  width: 195px;
-  height: 40px;
-  left: 215px;
-  top: 498px;
-  background: #FF008E;
-  transition: transform 0.3s ease;
-  
-  p {
-    position: absolute;
-    color: #FFFFFF;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    text-transform: uppercase;
-  }
-  &:hover {
-    transform: scale(1.05); 
-  }
+export const SuccessModal = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #1B1B1F;
+  color: #fff;
 `;
+
+
+ 

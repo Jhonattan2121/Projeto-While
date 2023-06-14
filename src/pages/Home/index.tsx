@@ -1,5 +1,5 @@
 
-import {   LoginBox , GirBanner  } from "./styles";
+import {   LoginBox , GirBanner , Container  } from "./styles";
 
 import ButtonComponents from '../../components/ButtonComponents';
 import Girlbane from '../../assets/banner-girl.png';
@@ -7,8 +7,7 @@ import MessageListComponents from "../../components/MessageList";
 
 export default function Home() {
   return (
-    <>
-      <MessageListComponents />
+    <Container>
       <LoginBox>
           <GirBanner className="girl">
             <img src={Girlbane} alt="" />
@@ -19,7 +18,8 @@ export default function Home() {
      
       </LoginBox>
       
+      <MessageListComponents />
       
-    </>
+    </Container>
   )
 }
