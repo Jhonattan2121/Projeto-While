@@ -16,10 +16,7 @@ export const Strong = styled.strong`
   font-size: 32px;
   line-height: 36px;
 
-  @media screen and (max-width: 768px) {
-    font-size: 24px;
-    line-height: 28px;
-  }
+  
 `;
 
 export const LogoImage = styled.img`
@@ -30,11 +27,7 @@ export const LogoImage = styled.img`
   transform: translateX(-50%);
   top: 32px;
 
-  @media screen and (max-width: 768px) {
-    width: 200px;
-    height: 18px;
-    top: 16px;
-  }
+ 
 `;
 
 export const MessageList = styled.ul`
@@ -45,13 +38,7 @@ export const MessageList = styled.ul`
     left: 34%;
     transform: translateX(-50%);
     top: 165px;
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    height: auto;
-    padding: 16px;
-    box-sizing: border-box;
-    top: 120px;
-  }
+ 
 `;
 
 export const MessageItem = styled.li`
@@ -63,15 +50,7 @@ export const MessageItem = styled.li`
     margin-left: 80px;
   }
 
-  @media screen and (max-width: 768px) {
-    max-width: 100%;
-    padding: 16px;
-    border-radius: 10px;
-
-    &:nth-child(2) {
-      margin-left: 0;
-    }
-  }
+ 
 `;
 
 export const MessageContent = styled.span`
@@ -103,28 +82,7 @@ export const MessageUser = styled.div`
     margin-left: 12px;
   }
 
-  @media screen and (max-width: 768px) {
-    margin-top: 8px;
-
-    .userImage {
-      padding: 1px;
-    }
-
-    img {
-      width: 24px;
-      height: 24px;
-      border-width: 2px;
-    }
-
-    span {
-      font-size: 14px;
-      margin-left: 8px;
-    }
-  }
+  
 `;
 
-export const InputContainer = styled.div``;
 
-export const InputText = styled.text``;
-
-export const SendButton = styled.div``;

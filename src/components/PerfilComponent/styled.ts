@@ -140,47 +140,6 @@ input {
   cursor: pointer;
 }
 
-@media (max-width: 480px) {
-  .modal {
-    padding: 10px;
-  }
-
-  .userImage {
-    margin-top: 10px;
-  }
-
-  .userImage img {
-    width: 75px;
-    height: 75px;
-  }
-
-  .Name {
-    margin-top: 10px;
-    font-size: 18px;
-  }
-
-  .Name-p {
-    margin-top: 5px;
-    font-size: 14px;
-  }
-
-  .MessageLabel {
-    margin-top: 10px;
-    font-size: 18px;
-  }
-
-  input {
-    margin-top: 5px;
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  .SendMessageButton {
-    margin-top: 10px;
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-}
 `
 
 export const Sidebar = styled.div`
